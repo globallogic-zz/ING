@@ -10,16 +10,17 @@
 	<![endif]-->
 <!-- Mobile Specific Metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-<script type="application/x-javascript">
+<script type="application/x-javascript" src="javascripts/common.js"></script>
+<!--<script type="application/x-javascript">
 		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){
 			window.scrollTo(0,1);
 		}
-	</script>
+	</script>-->
 <!-- CSS -->
-<link rel="stylesheet" href="includes/base.css">
-<link rel="stylesheet" href="includes/grid.css">
-<link rel="stylesheet" href="includes/layout.css">
+<link rel="stylesheet" href="stylesheets/base.css">
+<link rel="stylesheet" href="stylesheets/grid.css">
+<link rel="stylesheet" href="stylesheets/layout.css">
 <!-- Favicons -->
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
@@ -281,67 +282,10 @@
   
 </div>
 </body>
-<script type="text/javascript" src="includes/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="includes/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="includes/jquery.iosslider.js"></script>
-<script type="text/javascript" src="includes/jquery.ui.totop.js"></script>
-<script type="text/javascript" src="includes/bookmarkscroll.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	$().UItoTop({ easingType: 'easeOutQuart' });
-	
-	$('#nav-expand').click(function() {
-		$('.navigation nav').show();
-		$('#nav-expand').hide();
-		$('#nav-collapse').show();
-	});
-	
-	$('#nav-collapse').click(function() {
-		$('.navigation nav').hide();
-		$('#nav-expand').show();
-		$('#nav-collapse').hide();
-	});
-	
-	$('#savings .iosSlider').iosSlider({		
-		navSlideSelector: $('#savings li a'),		
-		onSlideChange: slideContentChange,
-		onSliderLoaded: slideContentLoaded
-	});
-	
-	$('#investings .iosSlider').iosSlider({
-		navSlideSelector: $('#investings li a'),		
-		onSlideChange: slideContentChange,
-		onSliderLoaded: slideContentLoaded
-	});
-	
-	$('#insurance .iosSlider').iosSlider({
-		navSlideSelector: $('#insurance li a'),		
-		onSlideChange: slideContentChange,
-		onSliderLoaded: slideContentLoaded
-	});
-	
-	$('#mortagages .iosSlider').iosSlider({
-		navSlideSelector: $('#mortagages li a'),		
-		onSlideChange: slideContentChange,
-		onSliderLoaded: slideContentLoaded
-	});
-	
-	function slideContentChange(args) {
-		$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
-		$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
-		
-		$(args.sliderObject).parent().parent().parent().find('a').removeClass('current');
-		$(args.sliderObject).parent().parent().parent().find('a:eq(' + args.currentSlideNumber + ')').addClass('current');
-	}
-	
-	function slideContentLoaded(args) {		
-		$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
-		$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
-		
-		$(args.sliderObject).parent().parent().parent().find('a').removeClass('current');
-		$(args.sliderObject).parent().parent().parent().find('a:eq(' + args.currentSlideNumber + ')').addClass('current');					
-	}	
-});
-</script>
+<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery.iosslider.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="javascripts/bookmarkscroll.js"></script>
+<script type="text/javascript" src="javascripts/home.js"></script>
 </html>
