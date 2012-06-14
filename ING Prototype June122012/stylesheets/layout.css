@@ -814,7 +814,7 @@ a.loginbtn {
   margin-top: 5px;
   font-weight: normal;
 }
-.popup .showrowh3 {
+.popup .showrow h3 {
   background: url(../images/staricon.png) no-repeat 0 0 transparent;
   display: inline-block;
   width: 154px;
@@ -822,7 +822,7 @@ a.loginbtn {
   float: left;
   margin: 0px 20px 0 0px;
 }
-.popup .showrowh4 {
+.popup .showrow h4 {
   display: inline-block;
   float: right;
   margin: 40px 0px 0px 0px;
