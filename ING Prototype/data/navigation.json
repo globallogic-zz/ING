@@ -1,0 +1,18 @@
+﻿[
+	{
+		"title": "Savings",
+		"key": "savings"
+	},
+	{
+		"title": "Investing",
+		"key": "investing"
+	},
+	{
+		"title": "Insurance",
+		"key": "insurance"
+	},
+	{
+		"title": "Mortgages",
+		"key": "mortgages"
+	}
+]
