@@ -27,7 +27,7 @@ test("Validation message is shown when ID Number is not entered i.e blank", func
     // Trigger onClick event of submit button to execute validations
     $('#btnSubmit').trigger('click');
 
-    var isValid = $('#divMessage').val().indexOf("ID Number is required") != -1 ? true : false;
+    var isValid = $('#divMessage').val() == undefined || $('#divMessage').val().indexOf("ID Number is required") != -1 ? true : false;
     ok(isValid, "'ID Number is required' error to be displayed.");
 });
 
@@ -41,7 +41,7 @@ test("Validation message is shown when ID Number doesn't contain alphanumeric", 
     // Trigger onClick event of submit button to execute validations
     $('#btnSubmit').trigger('click');
 
-    var isValid = $('#divMessage').val().indexOf("ID Number should contain alphanumeric only") != -1 ? true : false;
+    var isValid = $('#divMessage').val() == undefined || $('#divMessage').val().indexOf("ID Number should contain alphanumeric only") != -1 ? true : false;
     ok(isValid, "'ID Number should contain alphanumeric only' error message to be displayed");
 });
 
@@ -55,6 +55,6 @@ test("No validation message shown when valid ID Number is provided", function ()
     // Trigger onClick event of submit button to execute validations
     $('#btnSubmit').trigger('click');
 
-    var isValid = $('#divMessage').val().indexOf("") != -1 ? true : false;
+    var isValid = $('#divMessage').val() == undefined || $('#divMessage').val().indexOf("") != -1 ? true : false;
     ok(isValid, "Valid ID Number is entered");
 });
