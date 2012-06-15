@@ -8,10 +8,23 @@
   <description>
 		Ing Prototype
   </description>	  
-  	
+  	<repositories>
+		<repository>
+			<id>openqa</id>
+	 		<name>OpenQA Repository</name>
+	 		<url>http://search.maven.org/#search%7Cga%7C1%7Cphantomjs</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	
+	
 	<build>
-	    <finalName>ING-Prototype</finalName>
-			
+	    <finalName>ING-Prototype</finalName>		
 		<plugins>
 			<plugin>
 				<groupId>com.samaxes.maven</groupId>
@@ -58,7 +71,26 @@
 					<sourceDirectory>${basedir}/less</sourceDirectory>
 					<outputDirectory>${basedir}/target/lesscss</outputDirectory>
 				</configuration>
-			</plugin>		
-		</plugins>
+			</plugin>	
+			<plugin>
+			    <groupId>net.kennychua</groupId>
+			    <artifactId>phantomjs-qunit-runner</artifactId>
+				<version>1.0.11</version>				
+				<executions>
+				    <execution>
+				      <goals>
+				        <goal>generate-html</goal>
+				      </goals>
+				    </execution>
+				  </executions>				
+			    <configuration>
+			      <jsSourceDirectory>${basedir}/javascripts</jsSourceDirectory>
+			      <jsTestDirectory>${basedir}/JavaScriptTests/javascripts</jsTestDirectory>
+			      <ignoreFailures>false</ignoreFailures>
+			      <phantomJsExec>${basedir}/phantomjsexecutable/phantomjs.exe</phantomJsExec>
+			    </configuration>
+			  </plugin>
+		</plugins>		
 	</build>	
+	
 </project>

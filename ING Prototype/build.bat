@@ -1,1 +1,1 @@
-call mvn clean compile
+call mvn clean test
