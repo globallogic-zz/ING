@@ -8,8 +8,10 @@
   <description>
 		Ing Prototype
   </description>	  
+  	
 	<build>
 	    <finalName>ING-Prototype</finalName>
+			
 		<plugins>
 			<plugin>
 				<groupId>com.samaxes.maven</groupId>
@@ -56,7 +58,7 @@
 					<sourceDirectory>${basedir}/less</sourceDirectory>
 					<outputDirectory>${basedir}/target/lesscss</outputDirectory>
 				</configuration>
-			</plugin>
-		</plugins>		
+			</plugin>		
+		</plugins>
 	</build>	
 </project>

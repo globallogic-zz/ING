@@ -1,0 +1,38 @@
+Build Process Document
+---------------------------
+
+The build currently *ONLY* demonstrates the LESS compilation, JS & CSS minification, JS & CSS merging and Unit Testing. It doesn't currently creates a complete deployable application and it would be extended later on.
+
+Software Requirement for build execution
+
+1. JDK 1.5 (http://java.sun.com/javase/downloads/index_jdk5.jsp)
+2. Maven 3.0.4 (http://apache.techartifact.com/mirror/maven/binaries/)
+
+Installing/Configuring JDK 1.5
+
+Please use the following URL for configuring JDK 1.5 on your system: http://wiki.indivohealth.org/index.php/Installing_And_Configuring_Java_-_Windows.
+
+Installing/Configuring Maven 3
+
+1. Unzip apache-maven-3.0.4-bin.zip to the folder C:\maven.
+2. Right-click on the My Computer on the desktop or start menu, and select the Properties menu item.
+3. Select the “Advanced” tab and click on the “Environment Variables” button.
+4. Click on the “New” button in the User variables section and add a variable named M2_HOME, with a value of the top level directory of where maven was installed e.g. 
+C:\maven. Press the “OK” button to save.
+5. Next, highlight the Path variable in the System variables section of this screen and press the “Edit” button. 
+6. At the end of the variable value displayed for the "Path" variable name, append a semi-colon (“;”) and then add the full path of the 'bin' subdirectory in your 
+maven directory e.g. C:\maven\bin. Then press the “OK” button on the Edit System Variable window and then press the “OK” button on the System Properties windows.
+7. Open a new command window. At the command prompt type mvn --version. You should see the response.
+
+Github URL
+
+https://github.com/globallogic/ING
+
+Steps To Execute/Verify the Build
+
+1. Open the GitHub URL and navigate to the folder "ING Prototype".
+2. Download the code and open the directory where the code is downloaded.
+3. Click on build.bat.
+4. A folder named "target" will get created. 
+5. The build.bat uses maven to compile the less file into the css file. The source folder of less file is /"ING Prototype"/less and the compiled file is created in /target/lesscss folder
+6. The build.bat uses maven-minify-plugin to minify and merge the js files. The merge and minify js and css files are created in the folder /target/ING-Prototype/javascripts and /target/ING-Prototype/stylesheets folders.
