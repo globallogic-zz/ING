@@ -304,39 +304,39 @@ a.loginbtn      						{ text-decoration: none; color: #294b8c;}
 .marbtm16								{ margin-bottom:32px;}
 .martop16								{ margin-top:32px;}
 
-/*-----------@shub---------- @Popup----------*/
-.popup									{ min-height:330px; height:auto; margin-right:0px; width:450px; background:@color-fff;}	
-.popup .header							{ overflow:hidden; border-bottom:dotted 1px #a1a1a1; margin:0px 20px;}					
-.popup h2								{ font-size:40px; font-weight:bold; float:left; margin:0;}
-.popup .deselecticon					{ background:url(../images/recent-icon.png) no-repeat 0 -28px transparent;
-										  display:inline-block; width:40px; height:28px; float:right; margin:15px 0px 0 0; }
-.popup .showrow							{ overflow:hidden; margin:5px 20px;}
-.popup .showrow .leftside				{ font-size:22px; font-weight:bold; float:left; color:#F36E1C; font-weight:normal;}
-.popup .showrow .rihgtside				{ font-size:24px; font-weight:bold; float:right; color:#F36E1C; }
-.popup .showrow .labletxt				{ clear:both; font-size:24px; font-weight:bold; float:right; color:#9F9F9F;
-										  margin-top:5px; font-weight:normal; }
-.popup .showrow	h3						{ background:url(../images/staricon.png) no-repeat 0 0 transparent;
-										  display:inline-block; width:154px; height:154px; float:left;
-										   margin:0px 20px 0 0px;}
-.popup .showrow	h4						{ display:inline-block; float:right;
-										   margin:40px 0px 0px 0px; font-size:40px; font-weight:normal; color:#9F9F9F}
-.popup .dropdown   					    { display:inline-block; -moz-border-radius: 4px; -webkit-border-radius: 4px;
-										 border-radius: 4px; border: solid 2px #d0d0d0; color: #555;
-										 padding: 8px;	font-size: 22px; height:55px; width:285px; color:#9F9F9F;
-										 
-										  background: #ededed;
-										  background: -moz-linear-gradient(top,  #fdfdfd 0%, #ededed 100%);
-										  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#d6d6d6));
-										  background: -webkit-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
-										  background: -o-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
-										  background: -ms-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
-										  background: linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
-										  }
+/*-----------@shub---------- @Popup----------Nested Rules for less CSS*/
+.popup{ 
+	min-height:330px; height:auto; margin-right:0px; width:450px; background:@color-fff;
+    .header{ overflow:hidden; border-bottom:dotted 1px #a1a1a1; margin:0px 20px;}	
+    h2{ font-size:40px; font-weight:bold; float:left; margin:0;}
+	.deselecticon{ background:url(../images/recent-icon.png) no-repeat 0 -28px transparent;display:inline-block; width:40px; height:28px; float:right; margin:15px 0px 0 0; }
+	.showrow{ overflow:hidden; margin:5px 20px;
+			.leftside{font-size:22px; font-weight:bold; float:left; color:#F36E1C; font-weight:normal;}
+			.rihgtside{font-size:24px; font-weight:bold; float:right; color:#F36E1C;}
+			.labletxt{clear:both; font-size:24px; font-weight:bold; float:right; color:#9F9F9F; margin-top:5px; font-weight:normal;}
+			h3{ background:url(../images/staricon.png) no-repeat 0 0 transparent;display:inline-block; width:154px; height:154px; float:left;margin:0px 20px 0 0px;}
+			h4{ display:inline-block; float:right;margin:40px 0px 0px 0px; font-size:40px; font-weight:normal; color:#9F9F9F;}
+	}
+	.dropdown{ display:inline-block; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+		border-radius: 4px; border: solid 2px #d0d0d0; color: #555;
+		padding: 8px;	font-size: 22px; height:55px; width:285px; color:#9F9F9F;
+		 
+		 background: #ededed;
+		 background: -moz-linear-gradient(top,  #fdfdfd 0%, #ededed 100%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#d6d6d6));
+		 background: -webkit-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
+		 background: -o-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
+		 background: -ms-linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
+		 background: linear-gradient(top,  #fdfdfd 0%,#ededed 100%);
+	}
+	.bdrtop{ border-top:dotted 1px #a1a1a1; padding-top:10px;}
+}	
 
-.popup .bdrtop							{ border-top:dotted 1px #a1a1a1; padding-top:10px;}
-a#show-panel							{color: #979797; text-decoration:none; font-size: 12px; line-height:16px; margin: 21% 0 0 0%;}
 
-/***** End *****/	
+a#show-panel							{color: #979797; text-decoration:none; font-size: 12px; line-height:16px; margin: 21% 0 0 3%;}
+
+
+/***** End *****/
 
 /*--------CSS for Lightbox------------*/	
 #lightbox								{   display:none; background:#000000;
