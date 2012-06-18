@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$('.navigation nav').show();
 	});
 	$('.navigation nav').click(function() {
-		$(this).hide();
+		//$(this).hide();
 	});
 	$('.iosSlider').iosSlider({
 		autoSlide: false,
