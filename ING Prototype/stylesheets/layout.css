@@ -425,6 +425,11 @@ a.primary-btn {
 .notch {
   display: none;
 }
+.savingSlider {
+  width: 100%;
+  height: 168px;
+  position: relative;
+}
 .iosSlider {
   width: 100%;
   height: 390px;
@@ -983,8 +988,15 @@ a#show-panel {
     padding-right: 17px;
     float: left;
   }
-  .user-nav ul {
+   .user-nav ul {
     display: none;
+	position:absolute;
+	background: #999;
+	padding:5px;
+	border-radius:3px;
+	box-shadow:2px 2px 2px #666;
+	margin-left:-108px
+	
   }
   .user-nav .mobile-nav {
     background: url(../images/drop-down-arrow-mobile.png) 0 0 no-repeat;
@@ -1052,11 +1064,11 @@ a#show-panel {
     padding: 0;
   }
   .recent-item {
-    padding: 2% 0;
+    padding: 5% 0;
     border: none;
     border-radius: 0;
     position: relative;
-    height: auto;
+    height: 80px;
     background: #EEEEEE;
     background: -moz-linear-gradient(center top, #fefefe, #eeeeee);
     background: -webkit-gradient(linear, center top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #eeeeee));
@@ -1186,6 +1198,10 @@ a#show-panel {
   .tophead {
     margin-top: -9px;
   }
+    .savingSlider {  
+ 	height: 410px;  
+  }
+
   /***** End *****/
 }
 @media only screen and (max-width: 320px) {
@@ -1211,5 +1227,16 @@ a#show-panel {
   .iosSlider {
     height: 460px;
   }
+  .popup{
+  	width: 300px;
+  }
+  .popup .dropdown{
+  	width: 180px;
+  }
+  #lightbox-panel{
+  	left: 0%;
+  }
+  .sblogo {width: 200px;}
+  .sblogo img {width: 50%;}
   /***** End *****/
 }

@@ -1,11 +1,15 @@
 $(document).ready(function() {
+	$('#bannernav').click(function() {
+		$('.user-nav ul').toggle();
+	});
 
-	$("a#show-panel").click(function(){
+	$(".show-panel").click(function(){
 		$("#lightbox, #lightbox-panel").fadeIn(300);
-	})
-	$("a#close-panel").click(function(){
+	});
+	
+	$("#close-panel, #lightbox").click(function(){
 		$("#lightbox, #lightbox-panel").fadeOut(300);
-	})
+	});
 				
 	$().UItoTop({ easingType: 'easeOutQuart' });
 	
@@ -20,16 +24,9 @@ $(document).ready(function() {
 		$('#nav-expand').show();
 		$('#nav-collapse').hide();
 	});
-	$('.iosSlider').iosSlider({
-		autoSlide: false,
-		autoSlideTimer: 5000,
-		scrollbar: false,
-		snapToChildren: true,
-		desktopClickDrag: true,					
-		responsiveSlideWidth: true,
-		navSlideSelector: $('.iosSliderButtons .button, .savings a'),
-		infiniteSlider: true,
-		startAtSlide: '1',
+	
+	$('.savingSlider').iosSlider({		
+		navSlideSelector: $('.iosSliderButtons .button'),
 		onSlideChange: slideContentChange,
 		onSliderLoaded: slideContentLoaded
 	});
